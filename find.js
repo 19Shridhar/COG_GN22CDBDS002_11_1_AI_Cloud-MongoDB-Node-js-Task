@@ -13,7 +13,7 @@ if (choice==='1'){
 
     for(var i=0;i<anyArray.length;i++){
         console.log('collections containing value '+anyArray[i])
-        var anyQuery = {$or: [{name :{$regex :anyArray[i]}},{age :{$regex :anyArray[i]}},{age :{$regex :anyArray[i]}}]}
+        var anyQuery = {$or: [{name :{$regex :anyArray[i]}},{age :{$regex :anyArray[i]}},{favourite_hero :{$regex :anyArray[i]}}]}
         findCollections(anyQuery);
     }
 }
