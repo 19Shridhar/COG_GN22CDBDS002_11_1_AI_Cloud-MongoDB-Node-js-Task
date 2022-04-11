@@ -12,7 +12,7 @@ if (choice==='1'){
     const anyArray = searchAny.split(' ')
 
     for(var i=0;i<anyArray.length;i++){
-        console.log('Search' +(i+1)+'collections containing value '+anyArray[i])
+        console.log('collections containing value '+anyArray[i])
         var anyQuery = {$or: [{name :{$regex :anyArray[i]}},{age :{$regex :anyArray[i]}},{age :{$regex :anyArray[i]}}]}
         findCollections(anyQuery);
     }
@@ -32,7 +32,7 @@ else if(choice==='2'){
         
         for(var i=0;i<nameArray.length;i++){
 
-            console.log('Search' +(i+1)+'collections with name '+nameArray[i])
+            console.log('collections with name '+nameArray[i])
             const nameQuery = {name :{$regex :nameArray[i]}}
             findCollections(nameQuery);
         
@@ -48,7 +48,7 @@ else if(choice==='2'){
         
         for(var i=0;i<ageArray.length;i++){
             
-            console.log('Search' +(i+1)+'collections with age '+ageArray[i])
+            console.log('collections with age '+ageArray[i])
             const ageQuery = {age :{$regex :ageArray[i]}}
             findCollections(ageQuery);
         }
@@ -62,7 +62,7 @@ else if(choice==='2'){
         const fav_heroArray=fav_hero.split(' ');
 
         for(var i=0;i<fav_heroArray.length;i++){
-            console.log('Search' +(i+1)+'collections with favourite hero '+fav_heroArray[i]);
+            console.log('collections with favourite hero '+fav_heroArray[i]);
             const fav_heroQuery = {favourite_hero :{$regex :fav_heroArray[i]}};
             findCollections(fav_heroQuery);
         }
